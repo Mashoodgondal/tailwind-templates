@@ -8,11 +8,12 @@
     <title>Document</title>
   </head>
   <body class="contaner bg-gray-300 shadow-md rounded-md p-8">
+    <h1 class="font-bold text-green-500 mb-10 text-3xl text-center">
+      My feedback form
+    </h1>
     <div class="contaner grid grid-cols-1 md:grid-cols-2 gap-5">
       <div>
-        <h1 class="font-bold text-green-500 mb-10 text-3xl text-center">
-          My feedback form
-        </h1>
+        <h2 class="font-bold text-blue-600 mb-3">Personal details</h2>
         <ul class="space-y-4">
           <li>
             <p>Name: <input type="text" /></p>
@@ -46,7 +47,8 @@
         </ul>
       </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2">
+    <hr class="mt-5" />
+    <div class="grid grid-cols-1 md:grid-cols-2 space-y-15">
       <div>
         <h2 class="font-bold mt-10 text-blue-600">
           How satisfied were you with you our survice?
@@ -71,7 +73,7 @@
         </ul>
       </div>
       <div>
-        <h1 class="font-bold text-blue-600 text-2xl mb-3">Furthere comments</h1>
+        <h1 class="font-bold text-blue-600 mb-3">Furthere comments</h1>
         <textarea
           name="comment"
           class="w-full"
@@ -79,22 +81,117 @@
         ></textarea>
       </div>
     </div>
-    <ul>
-      <li>
-        <p>
-          Bio Photo: <input type="./file" />
-          <input type="submit" name="choose..." value="choose..." />
-        </p>
-      </li>
-      <li>
-        <p>
-          Location visited: <iframe src="http://maps.google.com/maps"></iframe>
-        </p>
-      </li>
-      <li><input type="submit" name="submit" value="submit" /></li>
-    </ul>
+    <hr class="mt-3" />
 
-    <h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 space-y-15 mt-10">
+      <div>
+        <h2 class="font-bold text-blue-600 mb-10">
+          Click below and choose file
+        </h2>
+        Bio Photo: <input type="file" name="bioPhoto" accept="image/*" />
+      </div>
+
+      <div>
+        <h2 class="mb-3 font-bold text-blue-600">Location visited:</h2>
+        <iframe src="http://maps.google.com/maps"></iframe>
+      </div>
+    </div>
+    <center>
+      <button
+        type="button"
+        class="text-white bg-purple-700 mt-10 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+      >
+        Submit
+      </button>
+    </center>
+
+    <div class="container mx-auto p-4">
+      <h1 class="text-2xl text-center my-4">Time Table</h1>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border border-gray-300">
+          <tr class="bg-gray-200">
+            <th class="border">Day/Period</th>
+            <td class="border">9:30-10:20</td>
+            <td class="border">10:20-11:10</td>
+            <td class="border">11:10-12:20</td>
+            <td class="border">12:00-12:40</td>
+            <td class="border">12:40-1:30</td>
+            <td class="border">1:30-2:20</td>
+            <td class="border">2:20-3:10</td>
+            <td class="border">3:10-4:00</td>
+          </tr>
+
+          <tr class="bg-gray-100">
+            <th class="border">Monday</th>
+            <td class="border">Eng</td>
+            <td class="border">Math</td>
+            <td class="border">Che</td>
+            <!-- <td rowspan="6" class="border">Lunch</td> -->
+            <td colspan="3" class="border text-center bg-blue-200">LAB</td>
+            <td class="border">Phy</td>
+          </tr>
+          <tr class="border-b bg-gray-200">
+            <th class="p-2">Monday</th>
+            <td class="p-2">&ensp;&ensp;Eng</td>
+            <td class="p-2">&ensp;&ensp;Math</td>
+            <td class="p-2">&ensp;&ensp;Che</td>
+            <td class="p-2" rowspan="6">&ensp; &nbsp;Lunch</td>
+            <td class="p-2" colspan="3 text-center bg-blue-200">LAB</td>
+            <td class="p-2">&ensp;&ensp;Phy</td>
+          </tr>
+
+          <tr class="border-b bg-gray-100">
+            <th class="p-2">Tuesday</th>
+            <td class="p-2" colspan="3 text-center bg-blue-200">LAB</td>
+            <td class="p-2">&ensp;&ensp;Eng</td>
+            <td class="p-2">&ensp;&ensp;Che</td>
+            <td class="p-2">&ensp;&ensp;Math</td>
+            <td class="p-2">&ensp;&ensp;Sports</td>
+          </tr>
+
+          <tr class="border-b bg-gray-200">
+            <th class="p-2">Wednesday</th>
+            <td class="p-2">&ensp;&ensp;Math</td>
+            <td class="p-2">&ensp;&ensp;phy</td>
+            <td class="p-2">&ensp;&ensp;Eng</td>
+            <td class="p-2">&ensp;&ensp;Che</td>
+            <td class="p-2" colspan="3 text-center bg-green-200">Library</td>
+          </tr>
+
+          <tr class="border-b bg-gray-100">
+            <th class="p-2">Thursday</th>
+            <td class="p-2">&ensp;&ensp;Phy</td>
+            <td class="p-2">&ensp;&ensp;Eng</td>
+            <td class="p-2">&ensp;&ensp;Che</td>
+            <td class="p-2" colspan="3 text-center bg-blue-200">LAB</td>
+            <td class="p-2">&ensp;&ensp;Math</td>
+          </tr>
+
+          <tr class="border-b bg-gray-200">
+            <th class="p-2">Friday</th>
+            <td class="p-2" colspan="3 text-center bg-blue-200">LAB</td>
+            <td class="p-2">&ensp;&ensp;Math</td>
+            <td class="p-2">&ensp;&ensp;Che</td>
+            <td class="p-2">&ensp;&ensp;Eng</td>
+            <td class="p-2">&ensp;&ensp;Phy</td>
+          </tr>
+
+          <tr class="border-b bg-gray-100">
+            <th class="p-2">Saturday</th>
+            <td class="p-2">&ensp;&ensp;Eng</td>
+            <td class="p-2">&ensp;&ensp;Che</td>
+            <td class="p-2">&ensp;&ensp;Math</td>
+            <td class="p-2" colspan="3 text-center bg-yellow-200">Seminar</td>
+            <td class="p-2">&ensp;&ensp;Sports</td>
+          </tr>
+
+          <!-- Add similar rows for Tuesday, Wednesday, Thursday, Friday, and Saturday -->
+        </table>
+      </div>
+    </div>
+
+    <!-- <h1>
       &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
       &ensp; &ensp;Time Table
     </h1>
@@ -161,6 +258,6 @@
         <td colspan="3" style="text-align: center">Seminar</td>
         <td>&ensp;&ensp;Sports</td>
       </tr>
-    </table>
+    </table> -->
   </body>
 </html>
